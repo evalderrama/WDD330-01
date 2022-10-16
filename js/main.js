@@ -18,9 +18,11 @@ links.forEach((linkInfo) => {
   let linkElement = document.createElement("a");
   linkElement.textContent = linkInfo.label;
   linkElement.setAttribute('href', linkInfo.url);
+  console.log(linkElement)
 
   //Add link to li element
   liElement.appendChild(linkElement);
+  console.log(liElement)
 
   //Add li element to list
   olList.appendChild(liElement);

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD330 Portfolio</title>
+    <meta name="description" content="Assignment portal for Edgar Valderrama in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+  </head>
+  <body>
+    <h1>WDD-330 Portfolio</h1>
+
+    <h2>Week 03</h2>
+
+    <h3>Notes:</h3>
+    <div style="display: block;">Objects</div>
+    <ul>
+      <li>
+        We can define methods for an object. We can define a method as an assignment or inside the object.
+        <br><br>
+        <i>As an "assignment":</i>
+        <blockquote>
+          user.sayHi = function() { <br>
+            &nbsp;&nbsp;&nbsp;  alert("Hello!"); <br>
+          };
+        </blockquote>
+
+        <br><br>
+        <i>Inside the method:</i>
+        <table style="width: 100%;">
+          <thead>
+            <th>Normal form</th>
+            <th>Short form</th>
+          </thead>
+          <tbody>
+            <td>
+              user = {               <br>
+              &nbsp;&nbsp;&nbsp;  sayHi: function() {  <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert("Hello");    <br>
+              &nbsp;&nbsp;&nbsp;  }                    <br>
+              };
+            </td>
+            <td>
+              user = {  <br>
+              &nbsp;&nbsp;&nbsp;  sayHi() { // same as "sayHi: function(){...}"  <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert("Hello");  <br>
+              &nbsp;&nbsp;&nbsp;  }  <br>
+              };
+            </td>
+          </tbody>
+        </table>
+      </li>
+      <li>“this” in methods:  To access the object, a method can use the this keyword.</li>
+      <li>Arrow functions have no “this”. For instance, Arrow functions uses “this“ from the outer method.</li>
+      <li>An object can have values of type strings, numbers, booleans, arrays and functions.</li>
+      <li>
+        Great way to create an object:
+        <br><br>
+        const name = 'Iron Man';<br>
+        const realName = 'Tony Stark';<br>
+        <br>
+        // short ES6 way<br>
+        const ironMan = { name, realName };<br>
+      </li>
+      <li>
+        The parse() method takes a string of data in JSON format and returns a JavaScript object:<br>
+        JSON.parse(batman);
+      </li>
+      <li>
+        The stringify() method does the opposite, taking a JavaScript object and returning a string of JSON data, as can be seen in the example:<br>
+        JSON.stringify(wonderWoman);
+      </li>
+      <li>Object can be nested.</li>
+      <li>The Regex object can be used to create regular expressions.</li>
+    </ul>
+
+    <div style="display: block;">DOM</div>
+    <ul>
+      <li>Document.links returns a node list of all the < a > elements</li>
+      <li>The insertBefore() method will place a new element before another element</li>
+      <li>It's possible to update CSS with DOM</li>
+      <li>CSS property names that are separated by dashes must be written in camelCase notation</li>
+    </ul>
+
+    <div style="display: block;">Events</div>
+    <ul>
+      <li>The target property returns a reference to the node that fired the event.</li>
+    </ul>
+
+    <h3>Questions:</h3>
+    <ul>
+      <li>
+        Is a Javascript object the same as a Python dictionary?
+      </li>
+    </ul>
+  </body>
+</html>
