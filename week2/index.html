@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD330 Portfolio</title>
+    <meta name="description" content="Assignment portal for Edgar Valderrama in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+  </head>
+  <body>
+    <h1>WDD-330 Portfolio</h1>
+
+    <h2>Week 02</h2>
+
+    <h3>Notes:</h3>
+
+    <ul>
+      <li>Variables: We can use the keywords "const" and "let" to declare variables in addition to var. Non-primitive data types can still be mutated.</li>
+      <li>Variables: With the const keyword the variable cannot change its value. With let, another value can be reassigned to the variable.</li>
+      <li>Scope refers to where a constant or variable is accessible by the program.</li>
+      <li>Scope: Values of variables declared with const and let only exists inside the block they are declared in.</li>
+      <li>Global Scope: keep the number of global variables to a minimum. There is a risk of confusion or clash of variables.</li>
+      <li>Template Literals are a special types of string.</li>
+      <li>
+        Template Literals: The JavaScript expression is placed inside the curly braces with a $ character in front of them.
+        <blockquote>
+          const name = `Siri`;<br>
+          `Hello ${ name }!`;
+        </blockquote>
+
+        <i>Arrays:</i>
+        <blockquote>
+          const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow'];
+        </blockquote>
+      </li>
+      <li>
+        The pop() method removes the last item from an array.
+        <blockquote>
+          avengers.pop();
+        </blockquote>
+      </li>
+      <li>
+        The shift() method removes the first item in the array.
+        <blockquote>
+          avengers.shift();
+        </blockquote>
+      </li>
+      <li>
+        The push() method appends a new value to the end of the array.
+        <blockquote>
+          avengers.push('Thor');
+        </blockquote>
+      </li>
+      <li>
+        The unshift() method appends a new item to the beginning of the array.
+        <blockquote>
+          avengers.unshift('Captain America');
+        </blockquote>
+      </li>
+      <li>
+        The concat() method can be used to merge an array with one or more arrays:
+        <blockquote>
+          avengers.concat(['Hulk','Hawkeye', 'Black Widow']);
+        </blockquote>
+      </li>
+    </ul>
+
+    <div style="padding-left: 10px;">
+      <strong><i>Finding if a Value is in an Array</i></strong>
+    </div>
+    <ul>
+      <li>
+        indexOf() method return the index of the first occurrence
+        <blockquote>
+          avengers.indexOf('Iron Man');
+        </blockquote>
+      </li>
+      <li>
+        includes() method returns a boolean value depending on whether the array contains a particular element or 
+        <blockquote>
+          avengers.includes('Iron Man');
+        </blockquote>
+      </li>
+    </ul>
+
+    <h3>Questions:</h3>
+    <ul>
+      <li>
+        How to reset an array?
+
+        <br>
+        I read that there are some ways and the simplest one is setting the variable as an empty array.
+        <br><br>
+      </li>
+      <li>
+        Which is recommended to use, Function Declarations or Function Expressions?
+
+        <br>
+        I read that we should use function declarations when you want to create a function on the global scope and make it available throughout your code. Use function expressions to limit where the function is available, keep your global scope light, and maintain clean syntax.
+        <br><br>
+      </li>
+    </ul>
+
+    <br><br><br>
+    <a href="/">Return</a>
+  </body>
+</html>
