@@ -1,0 +1,89 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Questrial&display=swap');
+
+
+:root {
+  /* change the values below to your chosen font(s) */
+  --heading-font: 'Questrial', sans-serif;
+  --paragraph-font: 'Nunito', sans-serif;
+}
+
+html {
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+}
+
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#add-tasks {
+  position: absolute;
+  bottom: 50px;
+}
+
+#todo {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+#submitTask {
+  background-color: #fff;
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-size: 1.2rem;
+}
+
+.todos {
+  padding-left: 0;
+  width: 340px;
+}
+.todos > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #555;
+  padding: 0.5em;
+  margin-top: -1px;
+}
+.todos p {
+  margin: 0;
+}
+.todos span {
+  cursor: pointer;
+}
+.todos span.icon {
+  font-size: 24px;
+  line-height: 24px;
+  margin-right: 10px;
+}
+.todos span.icon.incomplete {
+  opacity: .5;
+}
+
+.task {
+  display: flex;
+}
+.square {
+  border: 1px solid black;
+  display: block;
+  height: 12px;
+  width: 12px;
+}
+.strike {
+  text-decoration: line-through;
+  color: gray;
+}
+.empty {
+  border-style: dotted;
+  opacity: 0.3;
+}
+.summary {
+  font-size: .9rem;
+}
+.summary button:not(.active) {
+  background-color: white;
+  border: 1px solid #777;
+  border-radius: 3px;
+}
