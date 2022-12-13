@@ -1,10 +1,10 @@
 // todos.js
 function tasks() {
   let toDoList = localStorage.getItem("tasks");
-  if (toDoList == "null") {
-    toDoList = [];
-  } else {
+  if (toDoList) {
     toDoList = JSON.parse(toDoList);
+  } else {
+    toDoList = [];
   }
   return toDoList;
 }
