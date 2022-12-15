@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WDD 330: Sign Up</title>
+    <meta name="description" content="Assignment portal for Edgar Valderrama in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Course Project - Join</a></li>
+      </ul>
+      <ul>
+        <li id="join-option"><a href="join.html">Join</a></li>
+        <li id="login-option"><a href="login.html">Login</a></li>
+        <li id="cart-option"><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+    <header>
+        <h1></h1>
+    </header>
+    <main>
+      <div class="content join-page">
+        <h1 class="text-center">Join Us</h1>
+
+        <form method="get" action="thankyou.html">
+          <fieldset>
+            <legend>User Information</legend>
+
+            <label class="required" for="first_name">First Name</label>
+            <input class="form-control" type="text" name="first_name" id="first_name" required="required" autofocus="autofocus">
+
+            <label class="required" for="last_name">Last Name</label>
+            <input class="form-control" type="text" name="last_name" id="last_name" required="required" pattern="[a-zA-Z-\s]{3,}" title="Only include alpha characters, hyphens, and spaces and must contain a minimum of 3 characters">
+
+            <label class="required" for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" required="required" placeholder="email@address.com">
+
+            <label class="required" for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" required="required" pattern="[a-zA-Z0-9]{6,}" title="Password must contain alphanumeric characters and a minimum of 6 characters">
+          </fieldset>
+
+          <input type="submit" value="Join">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      &copy;<span id="year"></span> | Course Project
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

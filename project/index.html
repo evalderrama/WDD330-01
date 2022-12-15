@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WDD 330: Project</title>
+    <meta name="description" content="Assignment portal for Edgar Valderrama in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Course Project - Home</a></li>
+      </ul>
+      <ul>
+        <li id="join-option"><a href="join.html">Join</a></li>
+        <li id="login-option"><a href="login.html">Login</a></li>
+        <li id="cart-option"><a href="cart.html" style="padding-right: 2rem;">Cart <span class="badge">2</span></a></li>
+      </ul>
+    </nav>
+    <header>
+        <h1></h1>
+    </header>
+    <main>
+        <section>
+            <h2>Kids Hats</h2>
+            <div class="controls">
+              <div class="sorting">
+                Sort by: 
+                <select id="sortBy">
+                    <option value="">- Select an option -</option>
+                    <option value="hatNameAscending">Hat Name Ascending</option>
+                    <option value="hatNameDescending">Hat Name Descending</option>
+                    <option value="hatPriceAscending">Hat Price Ascending</option>
+                    <option value="hatPriceDescending">Hat Price Descending</option>
+                </select>
+              </div>
+              <div class="filtering">
+                Price: 
+                <label><input class="priceRange" data-min='0' data-max='25' type="checkbox" value='true'>$0 - $25</label>
+                <label><input class="priceRange" data-min='26' data-max='50' type="checkbox">$26 - $50</label>
+              </div>
+            </div>
+            <div id="hats">
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy;<span id="year"></span> | Course Project
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/hats.js"></script>
+  </body>
+
+</html>
