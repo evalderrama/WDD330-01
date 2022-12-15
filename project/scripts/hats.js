@@ -175,10 +175,6 @@ if (pageHats) {
     }
   }
 
-  function saveElements(elements) {
-    localStorage.setItem('added_elements', JSON.stringify(elements));
-  }
-
   // Add a change event listener to the HTML element with an ID of sortBy that calls the sortBy function
   document.querySelector("#sortBy").addEventListener("change", sortBy);
   document.querySelector(".filtering").addEventListener("change", filterByPrice);
@@ -186,7 +182,7 @@ if (pageHats) {
 
 const pageAddedHats = document.querySelector("#hats-added");
 if (pageAddedHats) {
-  const elementList = addedElements().map(elem => elem.id);
+  let elementList = addedElements().map(elem => elem.id);
 
   // Output function
   function output(hats) {
@@ -238,7 +234,16 @@ if (pageAddedHats) {
     const response = await fetch("data/hats.json");
     if (response.ok) {
       hatList = await response.json();
+      elementList = addedElements().map(elem => elem.id);
+
       output(hatList);
+
+      if (elementList.length > 0) {
+        document.querySelector("#pay").classList.remove("hidden");
+      } else {
+        document.querySelector("#hats-added").innerHTML = "<div class='no-records'>No hats added</div>"
+        document.querySelector("#pay").classList.add("hidden");
+      }
     }
   }
 
@@ -250,19 +255,15 @@ if (pageAddedHats) {
       window.location = "login.html";
     else {
       const btn = e.target;
-      btn.classList.add('added');
       const elementId = btn.dataset.id;
 
-      let elementList = addedElements();
-      const elements = addedElements().map(elem => elem.id);
+      let elementList = addedElements().filter((elem) => elem.id != elementId);
 
-      //Remove item if not in shopping cart
-      if (elements.includes(elementId)) {
-        elementList.push({ id: elementId });
+      saveElements(elementList);
+      showBadge();
 
-        saveElements(elementList);
-        showBadge();
-      }
+      document.querySelector("#hats-added").innerHTML = "";
+      getHats();
     }
   }
 }
@@ -275,6 +276,10 @@ function addedElements() {
     elementList = [];
   }
   return elementList;
+}
+
+function saveElements(elements) {
+  localStorage.setItem('added_elements', JSON.stringify(elements));
 }
 
 const badge = document.querySelector(".badge");

@@ -121,8 +121,8 @@ section {
     margin: 0 0.5rem;
 }
 
-.join-page, .login-page, .thanks {
-    height: calc(100vh - 150px);
+.join-page, .login-page, .thanks, .shoping-cart {
+    min-height: calc(100vh - 150px);
 }
 
 .join-page form, .login-page form {
@@ -267,6 +267,15 @@ input[type=submit] {
     color: white;
     padding: 0.2rem 0.5rem;
     width: 140px;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-records {
+    opacity: .5;
+    margin-bottom: 2rem;
 }
 
 /* Media Queries */
